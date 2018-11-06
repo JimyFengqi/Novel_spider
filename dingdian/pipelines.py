@@ -65,8 +65,10 @@ class DingdianPipeline(object):
 				with open(titlenamepath,'wb') as file_write:
 					cont=soup1.find("dd",attrs={"id":"contents"}).getText()
 					#print cont
-					file_write.write(cont)
-					file_write.close()		
+					if cont:
+						cont=cont.replace('<br>','\n')
+						file_write.write(cont)
+						file_write.close()		
 					
 		
 

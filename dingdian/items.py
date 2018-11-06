@@ -13,7 +13,8 @@ class DingdianItem(scrapy.Item):
     # name = scrapy.Field()
 	novel_name = scrapy.Field()#小说名字
 	author = scrapy.Field()#作者
-	novelurl = scrapy.Field()#小说地址
+	novel_instroduce_url=scrapy.Field()#小说简介地址
+	novelurl=scrapy.Field()#小说章节列表地址
 	serialstatus = scrapy.Field()#状态
 	serialnumber = scrapy.Field()#连载字数
 	category = scrapy.Field()#小说类别
@@ -21,8 +22,10 @@ class DingdianItem(scrapy.Item):
 	collect_num_total=scrapy.Field()#总收藏
 	click_num_total=scrapy.Field()#总点击
 	novel_breif=scrapy.Field()#小说简介
+	
 	chapterurl = scrapy.Field()#小说章节地址
 	chaptername = scrapy.Field()#小说章节名字
+
 
 '''
 class DDNovelContentItem(scrapy.Item):
